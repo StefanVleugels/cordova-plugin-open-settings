@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="cordova-plugin-open-settings" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>OpenSettings</name>
+    <js-module src="www/OpenSettings.js" name="OpenSettings">
+        <clobbers target="cordova.plugins.openSettings" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="OpenSettings">
+                <param name="ios-package" value="OpenSettings" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/OpenSettings.m" />
+    </platform>
+</plugin>
